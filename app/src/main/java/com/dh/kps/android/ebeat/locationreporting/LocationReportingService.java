@@ -33,7 +33,7 @@ public class LocationReportingService extends Service {
 
         locationListener = new DeviceLocationListener(this, intent.getIntExtra("beatId",0));
 
-        locationManager.requestLocationUpdates(provider,1000, 2,
+        locationManager.requestLocationUpdates(provider, 60000, 1000,
                 locationListener);
 
         return START_STICKY_COMPATIBILITY;
